@@ -11,12 +11,12 @@
             font-family: Arial, sans-serif;
         }
         body {
-            margin-top:200px;
             background-image: url('https://aprogramduck.github.io/class-3/img/background.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            display:flex;
+            display: flex;
+            
             align-items: center;
             flex-direction: column;
             color: #333;
@@ -28,10 +28,13 @@
             width: 80%;
             max-width: 800px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
         }
         h1 {
             text-align: center;
             color: #333;
+            font-size: 2.5em;
+            animation: fadeIn 2s;
         }
         .infobox {
             display: flex;
@@ -41,6 +44,7 @@
             border-radius: 8px;
             padding: 10px;
             margin-bottom: 20px;
+            animation: slideIn 1s;
         }
         .infobox img {
             margin-right: 20px;
@@ -56,7 +60,7 @@
             -webkit-text-fill-color: transparent;
         }
         p {
-            font-size: 0.9em;
+            font-size: 1em;
             line-height: 1.5;
         }
         h2 {
@@ -66,10 +70,56 @@
         }
         .head1 {
             margin-bottom: 15px;
-            font-size: 20px;
+            font-size: 1.2em;
         }
         .txt {
             margin-left: 25px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(210, 210, 210, 1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            padding: 15px;
+            animation: fadeInUp 1.5s;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+            animation: bounce 2s infinite;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
         }
     </style>
 </head>
@@ -88,42 +138,41 @@
         <h2 id="简介">简介</h2>
         <p>此处应有简介</p>
         <h2 id="梗及经典事例">梗及经典事例</h2>
-        <div class="head1">
+        <div class="card head1">
             <b>关于刘慧</b>
             <div class="txt">
                 <p>"三秋不见，如隔九秋"</p>
             </div>
         </div>
-        <div class="head1">
+        <div class="card head1">
             <b>《迪克，卷！》</b>
             <div class="txt">
                 <p>"cyc说我们最卷，我不卷，csy也不卷，就只有迪克卷了"——大鹏王子</p>
-                <p>然而gj反驳：你这个前提条件都是错的 </p>
+                <p>然而gj反驳：你这个前提条件都是错的</p>
             </div>
         </div>
-        <div class="head1">
+        <div class="card head1">
             <b>screamer</b>
             <div class="txt">
                 <p>和灵动王子的空调17℃ 27℃之战</p>
                 <del>你们就80hjl好了</del>
             </div>
         </div>
-        <div class="head1">
+        <div class="card head1">
             <b>自成一派的语言体系</b>
             <div class="txt">
                 <p>例句：知道你暗恋lh</p>
                 <p>你怎么不去吃<del>(文胜质)</del></p>
             </div>
         </div>
-        <div class="head1">
+        <div class="card head1">
             <b>奶茶新吃法</b>
             <div class="txt">
-                <img style="height:400px;" src="https://aprogramduck.github.io/class-3/img/milktea.JPG">
-                
+					 <p>继小和和把奶茶底卸下来喝以后，wwy提出了自己的想法x</p>
+                <img style="max-width:250px;" src="https://aprogramduck.github.io/class-3/img/milktea.JPG" alt="Milk Tea">
             </div>
         </div>
-                
-
+        <button class="button">更多精彩（其实没有）</button>
     </div>
 </body>
 </html>
